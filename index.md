@@ -11,7 +11,6 @@ tagline: Supporting tagline
     <p><span>{{ post.date | date_to_string }}</span></p> 
 	<h1> <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h1>
 	<p>
-	<a href="{{ BASE_PATH }}{{ post.url }}#disqus_thread"></a>
 	{% if post.content contains '<!--more-->' %}
 		{{ post.content | split:'<!--more-->' | first | strip_html }}
 		<a href="{{ BASE_PATH }}{{ post.url }}">Read More</a>
@@ -19,6 +18,7 @@ tagline: Supporting tagline
 		<!-- Case for when no excerpt is defined -->
 	{% endif %}
 	</p>
+	<a href="{{ BASE_PATH }}{{ post.url }}#disqus_thread" data-disqus-identifier="{{post.url}}" ></a>
 	</div>
   {% endfor %}
 </ul>
