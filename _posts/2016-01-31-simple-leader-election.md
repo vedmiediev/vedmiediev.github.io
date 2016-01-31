@@ -29,14 +29,14 @@ locks = database.GetCollection<PessimisticLockDto>("PessimisticLocks");
 
 It will contain documents with the following structure:
 {% highlight csharp %}
-    internal class PessimisticLockDto
-    {
-        public string Id { get; set; } 
-        [BsonElement("ts")]
-        public DateTime TimeStamp { get; set; } //Timestamp of the lock
-        [BsonElement("kid")]
-        public string KeeperId { get; set; } //lock Keeper Id
-    }
+internal class PessimisticLockDto
+{
+	public string Id { get; set; } 
+	[BsonElement("ts")]
+	public DateTime TimeStamp { get; set; } //Timestamp of the lock
+	[BsonElement("kid")]
+	public string KeeperId { get; set; } //lock Keeper Id
+}
 {% endhighlight %}
 We need to create the following indexes on this collection.
 
