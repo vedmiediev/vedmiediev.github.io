@@ -16,8 +16,6 @@ author :
   github : vedmiediev
   twitter : username
   feedburner : feedname
-
- excerpt_separator: "<!--more-->"
   
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
