@@ -5,6 +5,7 @@ description: "Simple leader election based on pessimistic locks implemented on s
 category: 
 tags: [Leader Election, Pessimistic Lock, MongoDB]
 keywords: [leader election pessimistic lock mongodb destributed computing c#]
+published: false
 ---
 {% include JB/setup %}
 
